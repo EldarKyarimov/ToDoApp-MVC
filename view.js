@@ -5,4 +5,7 @@ export default class View {
         this.list = document.querySelector('#myUl');
     }
 
+    inputValue(value) {
+        this.input.value = value;
+    }
 }
