@@ -4,4 +4,5 @@ export default class View {
         this.addBtn = document.querySelector('#addBtn');
         this.list = document.querySelector('#myUl');
     }
+
 }
