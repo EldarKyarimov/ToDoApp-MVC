@@ -4,7 +4,12 @@ export default class Controller {
         this.model = model;
     }
 
-    createNewLi() {
-        this.li = document.createElement('li');
+    init() {
+        this.view.hookAddButton(this.createTodo.bind(this));
+    }
+
+    createTodo(value) {
+        this.model.addTodo(value);
+        this.view.updateTodos(this.model.todos);
     }
 }
