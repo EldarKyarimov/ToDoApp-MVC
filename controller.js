@@ -5,11 +5,12 @@ export default class Controller {
     }
 
     init() {
-        this.view.hookAddButton(this.createTodo.bind(this));
+        this.view.hookAddButton(this.createTodo.bind(this))
     }
 
     createTodo(value) {
         this.model.addTodo(value);
+
         this.view.updateTodos(this.model.todos);
     }
 }

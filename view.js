@@ -6,8 +6,8 @@ export default class View {
     }
 
     hookAddButton(callback) {
-        this.addBtn.addEventListener('click', function () {
-            callback(this.model.value);
+        this.addBtn.addEventListener('click', () => {
+            callback(this.input.value);
 
             this.input.value = "";
         })
