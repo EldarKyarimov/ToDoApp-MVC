@@ -12,5 +12,7 @@ export default class Controller {
         this.model.addTodo(value);
 
         this.view.updateTodos(this.model.todos);
+
+        this.view.deleteButton();
     }
 }
