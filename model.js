@@ -11,6 +11,6 @@ export default class Model {
         }
         this.todos.push(newTodo);
 
-        console.log(this.todos)
+        // console.log(this.todos)
     }
 }

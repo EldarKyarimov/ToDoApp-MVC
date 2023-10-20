@@ -13,4 +13,8 @@ export default class Controller {
 
         this.view.updateTodos(this.model.todos);
     }
+
+    deleteTodo() {
+
+    }
 }
