@@ -13,18 +13,15 @@ export default class View {
         })
     }
 
-    deleteButton() {
-        const dltButton = document.createElement('button');
-        dltButton.innerHTML = 'X';
-        dltButton.className = 'dltBtn';
-        this.li.appendChild(dltButton);
-    }
-
-
     updateTodos(todos) {
         const li = document.createElement('li');
         li.innerText = todos.at(-1).value;
-
         this.ul.appendChild(li);
+
+        // delete button
+        const dltButton = document.createElement('button');
+        dltButton.innerHTML = 'X';
+        dltButton.className = 'dltBtn';
+        li.appendChild(dltButton);
     }
 }

@@ -6,7 +6,7 @@ export default class Model {
     addTodo(inputText) {
         const newTodo = {
             value: inputText,
-            cheked: false,
+            checked: false,
             deleted: false,
         }
         this.todos.push(newTodo);
