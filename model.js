@@ -8,9 +8,18 @@ export default class Model {
             value: inputText,
             checked: false,
             deleted: false,
+            todoId: Math.floor(Math.random() * 100),
         }
         this.todos.push(newTodo);
 
-        // console.log(this.todos)
+        console.log(this.todos)
+    }
+
+    deleteTodo() {
+
+    }
+
+    checkTodo() {
+
     }
 }

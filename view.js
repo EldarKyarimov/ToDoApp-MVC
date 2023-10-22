@@ -15,8 +15,9 @@ export default class View {
 
     updateTodos(todos) {
         const li = document.createElement('li');
-        li.id = Math.floor(Math.random() * 100);
+        li.id = todos.at(-1).todoId;
         li.innerText = todos.at(-1).value;
+        // checked 
         li.addEventListener('dblclick', function () {
             li.classList = 'checked';
         })
@@ -26,15 +27,18 @@ export default class View {
         const dltButton = document.createElement('button');
         dltButton.innerHTML = 'X';
         dltButton.className = 'dltBtn';
+
         dltButton.addEventListener('click', () => {
-            console.log(dltButton.parentElement.id);
+            callback()
         })
+        // dltButton.addEventListener('click', function () {
+        //     dltButton.parentElement.remove();
+        // });
+
 
         li.appendChild(dltButton);
 
     }
-
-
 
 
 }
