@@ -3,6 +3,7 @@ export default class View {
         this.input = document.querySelector('#myInput');
         this.addBtn = document.querySelector('#addBtn');
         this.ul = document.querySelector('#myUl');
+        this.todosContainer = document.querySelector('#todosContainer');
     }
 
     hookAddButton(callback) {
@@ -13,10 +14,10 @@ export default class View {
         })
     }
 
-    updateTodos(todos) {
+    drawTodo(todo, callback) {
         const li = document.createElement('li');
-        li.id = todos.at(-1).todoId;
-        li.innerText = todos.at(-1).value;
+        li.id = todo.id;
+        li.innerText = todo.value;
         // checked 
         li.addEventListener('dblclick', function () {
             li.classList = 'checked';
@@ -29,15 +30,17 @@ export default class View {
         dltButton.className = 'dltBtn';
 
         dltButton.addEventListener('click', () => {
-            callback()
+            callback(dltButton.parentElement.id);
         })
-        // dltButton.addEventListener('click', function () {
-        //     dltButton.parentElement.remove();
-        // });
-
 
         li.appendChild(dltButton);
+    }
 
+    updateTodos(todos, callback) {
+        this.ul.innerText = '';
+        todos.forEach(todo => {
+            this.drawTodo(todo, callback);
+        });
     }
 
 

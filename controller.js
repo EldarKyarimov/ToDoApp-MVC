@@ -12,13 +12,13 @@ export default class Controller {
     createTodo(value) {
 
         this.model.addTodo(value);
-        this.view.updateTodos(this.model.todos);
+        this.view.drawTodo(this.model.todos.at(-1), this.onDelete.bind(this));
     }
 
-    checkedTodo() {
-
-
-        this.view.updateTodos(this.model.todos);
+    onDelete(id) {
+        this.model.deleteTodo(id);
+        this.view.updateTodos(this.model.todos, this.onDelete.bind(this))
+        console.log(this.model.todos);
     }
 
 

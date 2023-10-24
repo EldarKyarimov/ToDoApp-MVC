@@ -73,3 +73,10 @@ ul li.checked {
 .header:after {
     content: ;
 }
+
+#myDlt {
+    max-height: 190px;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+}

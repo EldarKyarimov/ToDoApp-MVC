@@ -8,16 +8,27 @@ export default class Model {
             value: inputText,
             checked: false,
             deleted: false,
-            todoId: Math.floor(Math.random() * 100),
+            id: Math.floor(Math.random() * 100),
         }
         this.todos.push(newTodo);
 
-        console.log(this.todos)
+        // console.log(this.todos)
     }
 
-    deleteTodo() {
-
+    deleteTodo(id) {
+        this.todos = this.todos.filter((todo) => {
+            console.log(todo, id);
+            return todo.id != id
+        });
     }
+
+    // deleteTodo(id) {
+    //     this.todos.forEach(todo => {
+    //         console.log(todo, id);
+    //         if (todo.id == id) todo.deleted = true
+    //     });
+    // }
+
 
     checkTodo() {
 
