@@ -8,6 +8,18 @@
     border-radius: 5px;
 }
 
+#dltUl {
+    color: #000000;
+}
+
+#dltUl li {
+    background-color: rgb(231, 199, 173);
+}
+
+#dltUl li:hover {
+    background: #ddd;
+}
+
 ul {
     max-height: 190px;
     margin: 0;

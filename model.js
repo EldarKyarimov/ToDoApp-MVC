@@ -15,22 +15,23 @@ export default class Model {
         // console.log(this.todos)
     }
 
-    deleteTodo(id) {
-        this.todos = this.todos.filter((todo) => {
-            console.log(todo, id);
-            return todo.id != id
-        });
-    }
-
     // deleteTodo(id) {
-    //     this.todos.forEach(todo => {
+    //     this.todos = this.todos.filter((todo) => {
     //         console.log(todo, id);
-    //         if (todo.id == id) todo.deleted = true
+    //         return todo.id != id
     //     });
     // }
 
 
-    checkTodo() {
 
+    deleteTodo(id) {
+        this.todos.forEach(todo => {
+            console.log(todo, id);
+            if (todo.id == id) todo.deleted = true;
+        });
     }
+
+
+
+
 }
