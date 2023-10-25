@@ -13,7 +13,8 @@
 }
 
 #dltUl li {
-    background-color: rgb(231, 199, 173);
+    background-color: rgb(147, 147, 147);
+    color: #d3d3d3;
 }
 
 #dltUl li:hover {
