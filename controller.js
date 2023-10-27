@@ -10,14 +10,19 @@ export default class Controller {
 
     createTodo(value) {
         this.model.addTodo(value);
-        this.view.drawTodo(this.model.todos.at(-1), this.onDelete.bind(this));
+        this.view.drawTodo(this.model.todos.at(-1), this.onDelete.bind(this), this.onChange.bind(this));
     }
 
     onDelete(id) {
         this.model.deleteTodo(id);
-        this.view.updateTodos(this.model.todos, this.onDelete.bind(this));
+        this.view.updateTodos(this.model.todos, this.onDelete.bind(this), this.onChange.bind(this));
         console.log(this.model.todos);
-        // this.view.deletedTodos(this.model.todos, this.onDelete.bind(this));
+    }
+
+    onChange(id) {
+        this.model.displayChange(id);
+        this.view.updateTodos(this.model.todos);
+        console.log(this.model.todos);
     }
 
 }
