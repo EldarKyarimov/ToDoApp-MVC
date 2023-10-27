@@ -16,13 +16,13 @@ export default class Controller {
     onDelete(id) {
         this.model.deleteTodo(id);
         this.view.updateTodos(this.model.todos, this.onDelete.bind(this), this.onChange.bind(this));
-        console.log(this.model.todos);
+        // console.log(this.model.todos);
     }
 
     onChange(id) {
         this.model.displayChange(id);
         this.view.updateTodos(this.model.todos, this.onDelete.bind(this), this.onChange.bind(this));
-        console.log(this.model.todos);
+        // console.log(this.model.todos);
     }
 
 }

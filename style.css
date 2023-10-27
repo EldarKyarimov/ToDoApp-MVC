@@ -13,7 +13,8 @@ h5 {
     background-color: rgb(147, 147, 147);
     text-align: center;
     margin: 0;
-    padding: 2% 0;
+    padding: 0;
+    border-bottom: 0.2px solid rgb(0, 0, 0);
 }
 
 #dltUl {
@@ -22,7 +23,9 @@ h5 {
 
 #dltUl li {
     background-color: rgb(147, 147, 147);
-    color: #d3d3d3;
+    /* color: #d3d3d3; */
+    color: #2e2323ae;
+    text-decoration: line-through;
 }
 
 #dltUl li:hover {
@@ -56,9 +59,9 @@ ul li:hover {
 }
 
 ul li.checked {
-    background: rgba(56, 56, 56, 0.568);
+    background: rgb(111, 186, 57);
     color: #fff;
-    text-decoration: line-through;
+    /* text-decoration: line-through; */
     border: 1px solid #000;
 
 }

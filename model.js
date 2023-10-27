@@ -1,7 +1,6 @@
 export default class Model {
     constructor() {
         this.todos = [];
-        // this.delTask = [];
     }
 
     addTodo(inputText) {
@@ -14,7 +13,6 @@ export default class Model {
 
         }
         this.todos.push(newTodo);
-        console.log(this.todos);
     }
 
     deleteTodo(id) {
@@ -22,32 +20,16 @@ export default class Model {
             // console.log(todo, id);
             if (todo.id == id) todo.deleted = true;
         });
-        console.log(this.todos);
     }
 
     displayChange(id) {
         if (id == 'up') {
             this.todos.sort((a, b) => a.date - b.date);
-            console.log("down");
+            console.log("up");
         } else if ('down') {
             this.todos.sort((a, b) => b.date - a.date);
             console.log("down");
         } else console.log('error');
     }
-
-    // displayChange(id) {
-    //     switch (id) {
-    //         case 'up':
-    //             this.todos.sort((a, b) => a.date - b.date);
-    //             console.log("up");
-    //             break;
-    //         case 'down':
-    //             this.todos.sort((a, b) => b.date - a.date);
-    //             console.log("down");
-    //             break;
-    //         default:
-    //             console.log('error');
-    //     }
-    // }
 
 }

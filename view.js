@@ -23,11 +23,20 @@ export default class View {
         li.innerText = todo.value;
 
         this.ul.appendChild(li);
+        // ===============================
+
+        li.addEventListener('dblclick', function () {
+            li.classList = 'checked';
+        })
+
+
+        // ===============================
+
         const dltButton = document.createElement('button');
         dltButton.innerHTML = 'X';
         dltButton.className = 'dltBtn';
 
-        // todos display change  ===============================
+        // display change option ===============================
         this.upBtn.addEventListener('click', () => {
             changeDisplay(this.upBtn.id);
         });
@@ -36,7 +45,6 @@ export default class View {
             changeDisplay(this.downBtn.id);
         });
         // =====================================================
-
 
         dltButton.addEventListener('click', () => {
             callback(dltButton.parentElement.id);
