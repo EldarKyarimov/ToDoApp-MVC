@@ -2,10 +2,39 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: rgb(56, 55, 58);
+}
+
 .allToDo {
     margin: 03% 30%;
     border: 2px solid rgb(97, 97, 97);
     border-radius: 5px;
+}
+
+h5 {
+    color: #383636ae;
+    background-color: rgb(147, 147, 147);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    border-bottom: 0.2px solid rgb(0, 0, 0);
+}
+
+#dltUl {
+    color: #000000;
+}
+
+#dltUl li {
+    background-color: rgb(147, 147, 147);
+    /* color: #d3d3d3; */
+    color: #2e2323ae;
+    text-decoration: line-through;
+}
+
+#dltUl li:hover {
+    color: #9d9d9d;
+    background: #ddd;
 }
 
 ul {
@@ -34,9 +63,9 @@ ul li:hover {
 }
 
 ul li.checked {
-    background: rgba(56, 56, 56, 0.568);
+    background: rgb(111, 186, 57);
     color: #fff;
-    text-decoration: line-through;
+    /* text-decoration: line-through; */
     border: 1px solid #000;
 
 }
@@ -70,6 +99,9 @@ ul li.checked {
     text-align: center;
 }
 
-.header:after {
-    content: ;
+#myDlt {
+    max-height: 190px;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
 }
