@@ -54,7 +54,7 @@ export default class View {
         this.dltUl.appendChild(li);
     }
 
-    updateTodos(todos, callback) {
+    updateTodos(todos, callback, change) {
         this.ul.innerText = '';
         this.dltUl.innerText = '';
         todos.forEach((todo) => {
