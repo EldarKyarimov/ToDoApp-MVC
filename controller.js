@@ -21,7 +21,7 @@ export default class Controller {
 
     onChange(id) {
         this.model.displayChange(id);
-        this.view.updateTodos(this.model.todos);
+        this.view.updateTodos(this.model.todos, this.onDelete.bind(this), this.onChange.bind(this));
         console.log(this.model.todos);
     }
 

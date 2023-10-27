@@ -17,7 +17,7 @@ export default class View {
     }
 
     // basic view Task's
-    drawTodo(todo, callback, change) {
+    drawTodo(todo, callback, changeDisplay) {
         const li = document.createElement('li');
         li.id = todo.id;
         li.innerText = todo.value;
@@ -29,11 +29,11 @@ export default class View {
 
         // todos display change  ===============================
         this.upBtn.addEventListener('click', () => {
-            change(this.upBtn.id);
+            changeDisplay(this.upBtn.id);
         });
 
         this.downBtn.addEventListener('click', () => {
-            change(this.downBtn.id);
+            changeDisplay(this.downBtn.id);
         });
         // =====================================================
 
@@ -54,13 +54,13 @@ export default class View {
         this.dltUl.appendChild(li);
     }
 
-    updateTodos(todos, callback, change) {
+    updateTodos(todos, callback, changeDisplay) {
         this.ul.innerText = '';
         this.dltUl.innerText = '';
         todos.forEach((todo) => {
             if (todo.deleted) {
                 this.deletedTodos(todo, callback);
-            } else this.drawTodo(todo, callback);
+            } else this.drawTodo(todo, callback, changeDisplay);
         })
     }
 
