@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: rgb(56, 55, 58);
+}
+
 .allToDo {
     margin: 03% 30%;
     border: 2px solid rgb(97, 97, 97);
@@ -93,10 +97,6 @@ ul li.checked {
     padding: 30px 40px;
     color: white;
     text-align: center;
-}
-
-.header:after {
-    content: ;
 }
 
 #myDlt {
